@@ -51,6 +51,8 @@ public class HumioConfig extends GlobalConfiguration {
                 || i.getIngestToken() == null
                 || "".equals(i.repositoryName)
                 || i.repositoryName == null);
+                || "".equals(i.host)
+                || i.host == null);        
     }
 
     @Override
