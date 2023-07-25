@@ -53,7 +53,7 @@ public class HumioLogShipper {
         json.put("events", events.parallelStream().map(HumioLogShipper::toEventJson).collect(ArrayList::new, ArrayList::add, ArrayList::addAll));
 
         JSONObject tags = new JSONObject();
-        tags.put("host", "jenkins");
+        tags.put("host", host);
         json.put("tags", tags);
 
         JSONArray requestData = new JSONArray();
